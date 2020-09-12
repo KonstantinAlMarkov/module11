@@ -20,13 +20,13 @@
           <div class="line">
             <!-- пользователь указывает нижнюю границу weight -->
             <div>min weight:</div>
-            <input class="minweight__input" />
+            <input id="minInp" class="minweight__input" />
           </div>
 
           <div class="line">
             <!-- пользователь указывает верхнюю границу weight -->
             <div>max weight:</div>
-            <input class="maxweight__input" />
+            <input id="maxInp" class="maxweight__input" />
           </div>
 
           <!-- TODO: при нажатии элементы массива фильтруются в пределах [minweight, maxweight] -->
@@ -53,17 +53,22 @@
           <!-- пользователь указывает значения характеристик будущего фрукта -->
           <div class="line">
             <div>kind:</div>
-            <input class="kind__input" />
+            <input class="kind__input" id="kind__input" />
           </div>
-
+<!-- 
           <div class="line">
             <div>color:</div>
             <input class="color__input" />
+          </div> -->
+
+          <div class="line">
+            <div>color:</div>
+            <select class="selectpicker" id="selectpicker"></select>
           </div>
 
           <div class="line">
             <div>weight:</div>
-            <input class="weight__input" />
+            <input class="weight__input" id="weight__input" />
           </div>
 
           <!-- TODO: при нажатии новый фрукт добавляется в конец списка -->
@@ -75,8 +80,8 @@
       <section class="fruits__wrapper">
         <h2 class="wrapper__title">🥑 Список экзотических фруктов</h2>
         <!-- TODO: формировать список динамически (то есть закоментированный код удалить) -->
-        <ul class="fruits__list">
-          <!-- <li class="fruit__item fruit_violet">
+        <ul class="fruits__list" id="fruits_list">
+        <!--  <li class="fruit__item fruit_violet">
             <div class="fruit__info">
               <div>index: 0</div>
               <div>kind: Мангустин</div>
@@ -84,7 +89,7 @@
               <div>weight (кг): 13</div>
             </div>
           </li>
-          <li class="fruit__item fruit_green">
+           <li class="fruit__item fruit_green">
             <div class="fruit__info">
               <div>index: 1</div>
               <div>kind: Дуриан</div>
